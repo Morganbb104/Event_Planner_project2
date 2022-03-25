@@ -1,0 +1,21 @@
+{
+  "name": "event_planner_project2",
+  "version": "1.0.0",
+  "description": "group project-2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morganbb104/Event_Planner_project2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Morganbb104/Event_Planner_project2/issues"
+  },
+  "homepage": "https://github.com/Morganbb104/Event_Planner_project2#readme"
+}
