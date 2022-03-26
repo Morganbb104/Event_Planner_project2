@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Event</title>
+</head>
+<body>
+    <header>
+        <h1>Create A New Event</h1>
+    </header>
+    <main>
+        <form class="form create-event">
+            <!-- event description -->
+            <div class="form-group">
+                <label for="event-description">Event Description:</label>
+                <input class="form-input" type="text" id="event-description" />
+            </div>
+            <div class="form-group">
+                <label for="event-location">Location:</label>
+                <input class="form-input" type="text" id="event-location" />
+            </div>
+            <div class="form-group">
+                <label for="event-state">State:</label>
+                <input class="form-input" type="text" id="event-state" />
+            </div>
+            <div class="form-group">
+                <label for="event-category">Select a Category:</label>
+                <select class="form-input" id="event-category">
+                    <option value="concert">Concert</option>
+                    <option value="theatre">Theatre</option>
+                    <option value="party">Party</option>
+                    <option value="foodanddrink">Food & Drink</option>
+                    <option value="career">Career & Development</option>
+                    <option value="other">Something else? Other Awesome Events</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="start-time">What time does your event start?</label>
+                <input class="form-input" type="time" id="start-time" />
+            </div>
+            <div class="form-group">
+                <label for="end-time">What time does your event end?</label>
+                <input class="form-input" type="time" id="end-time" />
+            </div>
+            <div class="form-group">
+                <label for="submit-event-button">What time does your event end?</label>
+                <input class="form-input" type="button" id="submit-event- button" />
+            </div>
+    
+        </form>
+        <script src="./js/createEvent.js"></script>
+    </main>
+</body>
+</html>
