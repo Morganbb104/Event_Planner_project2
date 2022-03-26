@@ -36,3 +36,5 @@ Rsvp.init(
     modelName: 'user',
   }
 );
+
+module.exports = Rsvp;

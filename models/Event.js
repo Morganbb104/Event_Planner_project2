@@ -48,3 +48,5 @@ Event.init(
     modelName: 'user',
   }
 );
+
+module.exports = Event;

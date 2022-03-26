@@ -38,3 +38,5 @@ Comment.init(
     modelName: 'user',
   }
 );
+
+module.exports = Comment;
