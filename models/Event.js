@@ -15,6 +15,14 @@ Event.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    category: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     startTime: {
       type: DataTypes.TIME,
       allowNull: false,
@@ -45,7 +53,7 @@ Event.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'event',
   }
 );
 

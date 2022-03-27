@@ -1,3 +1,5 @@
+const { User } = require('../../models');
+
 const router = require('express').Router();
 
 // Routes for '/api/users'
