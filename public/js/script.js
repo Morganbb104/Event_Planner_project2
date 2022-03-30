@@ -79,23 +79,9 @@ window.onclick = function(event) {
 
 
 function submitFunction(){
-  document.getElementById('form').submit();
+  window.alert('test');
+  
+  // document.getElementById('form').submit();
 }
-// submitFunction()
 
 
-
-// function filterSubmit(event){
-//   submit.textContent = "Chosen Events submmited!";
-//   event.preventDefault();
-// }
-// const form = document.getElementById('form').value;
-// const submit = document.getElementById('submit').value;
-
-// form.addEventListener('submit',filterSubmit(event){
-//   event.preventDefault();
-//   console.log(form)
-//   console.log(submit)
-  
-  
-// })
