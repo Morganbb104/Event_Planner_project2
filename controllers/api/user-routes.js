@@ -1,4 +1,3 @@
-const { User } = require('../../models');
 
 const router = require('express').Router();
 const session = require('express-session');
@@ -104,14 +103,41 @@ router.post('/user/login', async (req, res) => {
 
 
 // route to update user info
-router.put('/user/update',async (req, res) => { 
-    const userData=await User.update({password:req.body.newPassword},{
-    where:{
-        email:req.body.email
-    },
-    individualHooks:true
+router.put('/user/update',async (req, res) => {
+    const checkEmail=await User.findOne({where:{email:req.body.email}});
+    console.log(checkEmail)
+    const checkPassword= await checkEmail.checkPassword(req.body.oldPassword);
+    if(checkPassword===true){
+        console.log('you can update it both Email and password true ');
+
+const updateData=await User.update({password:req.body.newPassword},{
+    where:{ email:req.body.email}
 });
-console.log(userData)
+console.log(updateData)
+    }else{
+        console.log('you cannot update it,it seems user wrote something wrong ')
+
+    }
+
+
+//     try{
+//           const userData=await User.update({password:req.body.newPassword},{
+//     where:{
+//         email:req.body.email,
+//     },
+//             individualHooks:true,
+// }); 
+// res.json({message:'Updated'})
+
+
+//     }catch(err){
+//         res.json(err)
+//     }
+
+ 
+
+
+
 
 
 

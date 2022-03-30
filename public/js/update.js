@@ -12,7 +12,7 @@ const modalNewPass=document.getElementById('modalNewPass');
       oldPassword:modalOldPass.value.trim(),
       newPassword:modalNewPass.value.trim()
     };
-    console.log(modalData)
+    // console.log(modalData)
     const fetchModalData=await fetch('/user/update',{
       method:'PUT',
       headers: { 'content-type': 'application/json' },
@@ -21,7 +21,7 @@ const modalNewPass=document.getElementById('modalNewPass');
 
     });
     const response=await fetchModalData.json().then((data)=>{
-window.alert('your information has been updated')
+window.alert(data.message)
    
     modalEmail.value="";
     modalNewPass.value="";

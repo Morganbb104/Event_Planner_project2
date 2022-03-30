@@ -6,6 +6,7 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
+
  }
 
 
@@ -46,6 +47,7 @@ User.init(
         return newUserData;
       },
       beforeUpdate:(newUserData)=>{
+        console.log(newUserData.password)
         newUserData.password=  bcrypt.hashSync(newUserData.password,10);
         return newUserData;
       }
