@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Planner Platform</title>
+        <link
+        rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <!-- font awesome cdn link  -->
+        <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header class="header">
+
+            <a href="#" class="logo">
+                <span>E</span>vent Planner</a>
+
+            <nav class="navbar">
+                <a href="#event">event</a>
+                <a href="#logIn">log in</a>
+                <a href="#signUp">sign up</a>
+                <a href="#yourProfile">your profile</a>
+                <a href="#contact">contact</a>
+            </nav>
+
+            <div id="menu-bars" class="fas fa-bars"></div>
+
+        </header>
+
+        <!-- home section starts  -->
+
+        <section class="home" id="home">
+
+            <div class="content">
+                <h3>Connect Everyone around you!
+                    <span>
+                        Best event planner
+                    </span>
+                </h3>
+                <a href="#" class="btn">Your Profile</a>
+                <a href="#" class="btn" id="myBtn">Event Filter</a>
+
+            </div>
+            <!-- The Modal -->
+            <div 
+                id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="form">
+                        <label for="states"><a href="#">Choose a state:</a></label>
+                        <select class ="states" name="states" id="states" size="1">
+                            <option value="AL">AL,Alabama</option>
+                            <option value="AK">AK,Alaska</option>
+                            <option value="AZ">AZ,Arizona</option>
+                            <option value="AR">AR,Arkansas</option>
+                            <option value="CA">CA,California</option>
+                            <option value="CO">CO,Colorado</option>
+                            <option value="CT">CT,Connecticut</option>
+                            <option value="DE">DE,Delaware</option>
+                            <option value="DC">DC,District of Columbia</option>
+                            <option value="FL">FL,Florida</option>
+                            <option value="GA">GA,Georgia</option>
+                            <option value="HI">HI,Hawaii</option>
+                            <option value="ID">ID,Idaho</option>
+                            <option value="IL">IL,Illinois</option>
+                            <option value="IN">IN,Indiana</option>
+                            <option value="IA">IA,Iowa</option>
+                            <option value="KS">KS,Kansas</option>
+                            <option value="KY">KY,Kentucky</option>
+                            <option value="LA">LA,Louisiana</option>
+                            <option value="ME">ME,Maine</option>
+                            <option value="MD">MD,Maryland</option>
+                            <option value="MA">MA,Massachusetts</option>
+                            <option value="MI">MI,Michigan</option>
+                            <option value="MN">MN,Minnesota</option>
+                            <option value="MS">MS,Mississippi</option>
+                            <option value="MO">MO,Missouri</option>
+                            <option value="MT">MT,Montana</option>
+                            <option value="NE">NE,Nebraska</option>
+                            <option value="NV">NV,Nevada</option>
+                            <option value="NH">NH,New Hampshire</option>
+                            <option value="NJ">NJ,New Jersey</option>
+                            <option value="NM">NM,New Mexico</option>
+                            <option value="NY">NY,New York</option>
+                            <option value="NC">NC,North Carolina</option>
+                            <option value="ND">ND,North Dakota</option>
+                            <option value="OH">OH,Ohio</option>
+                            <option value="OK">OK,Oklahoma</option>
+                            <option value="OR">OR,Oregon</option>
+                            <option value="PA">PA,Pennsylvania</option>
+                            <option value="RI">RI,Rhode Island</option>
+                            <option value="SC">DC,South Carolina</option>
+                            <option value="SD">SD,South Dakota</option>
+                            <option value="TN">TN,Tennessee</option>
+                            <option value="TX">TX,Texas</option>
+                            <option value="UT">UT,Utah</option>
+                            <option value="VT">VT,Vermont</option>
+                            <option value="VA">VA,Virginia</option>
+                            <option value="WA">WA,Washington</option>
+                            <option value="WV">WV,West Virginia</option>
+                            <option value="WI">WI,Wisconsin</option>
+                            <option value="WY">WY,Wyoming</option>
+                        </select>
+                        <br><br>
+                        <label for="event_category"><a href="#">Choose a category:</a></label>
+                        <select class ="event_category" name="event_category" id="event_category" size="1">
+                            <option value="volvo">wedding</option>
+                            <option value="saab">Exercising</option>
+                            <option value="opel">Homeparty</option>
+                            <option value="audi">others</option>
+                        </select>
+                        <br><br>
+                        <label for="appt"><a href="#">Time range for events(start):</a></label>
+                        <input type="date" name="date" value="2022-01-01" min="2022-01-01" max="2024-12-31">
+                        <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
+                        <label for="appt"><a href="#">Time range for events(end):</a></label>
+                        <input type="date" name="date" value="2022-01-02" min="2022-01-02" max="2024-12-31">
+                        <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
+                        <br><br>
+                        <input type="button" onclick="submitFunction()" value="Submit form">
+                        <!-- <input type="submit" value="Submit"> -->
+                        <!-- <a href="#" class="btn" id="submit">Submit</a> -->
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- <div class="swiper-container home-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/slide-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/slide-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/slide-3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/slide-4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/slide-5.jpg" alt=""></div>
+                    -->
+                    <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div>
+                </div>
+            </div> -->
+
+            <div class="swiper-container home-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    -->
+                    <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- home section ends-->
+
+
+        <!-- about section starts  -->
+
+        <section class="about" id="about">
+
+            <h1 class="heading">
+                <span>about</span>
+                us
+            </h1>
+
+            <div class="row">
+                <div class="content">
+                    <h3>Join or create event as you want
+                    </h3>
+                    <p>You can create event wherever and whenever you want</p>
+                    <p>Manage your event which you're going to in our friendly profile with you</p>
+                    <a href="#" class="btn">contact us</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- about section ends -->
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- custom js file link  -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
