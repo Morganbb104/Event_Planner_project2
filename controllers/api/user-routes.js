@@ -27,7 +27,7 @@ router.post('/user/signup', async (req, res) => {
         }
         req.session.save(() => {
             req.session.loggedIn = true;
-            res.json({message:`Your Email has beed added sucessfully \n--------------------------------------------
+            res.json({message:`Your Email has been added sucessfully \n--------------------------------------------
             ${userData.email} Please go to Login page to sign in`})
 
         })
