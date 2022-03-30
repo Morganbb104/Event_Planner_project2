@@ -22,7 +22,8 @@ router.post('/', (req, res) => {
     category: req.body.category,
     startTime: req.body.startTime,
     endTime: req.body.endTime,
-    date: req.body.date,
+    startDate: req.body.startDate,
+    endDate: req.body.endDate,
     description: req.body.description,
     hostId: req.body.hostId,
   })
@@ -98,7 +99,8 @@ router.put('/:id', (req, res) => {
       category: req.body.category,
       startTime: req.body.startTime,
       endTime: req.body.endTime,
-      date: req.body.date,
+      startDate: req.body.startDate,
+      endDate: req.body.endDate,
       description: req.body.description,
     },
     {
