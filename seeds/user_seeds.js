@@ -48,7 +48,7 @@ const userSeeds = [
   },
   {
     username: 'Trinity',
-    email: 'sally@test.com',
+    email: 'trinity@test.com',
     password: 'password10',
   },
   {
