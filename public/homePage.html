@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,8 +23,8 @@
 
             <nav class="navbar">
                 <a href="#event">event</a>
-                <a href="#logIn">log in</a>
-                <a href="#signUp">sign up</a>
+                <a href="/signin">log in</a>
+                <a href="/signUp">sign up</a>
                 <a href="#yourProfile">your profile</a>
                 <a href="#contact">contact</a>
             </nav>
@@ -129,16 +130,16 @@
                             <a href="#">Time range for events(start):</a>
                         </label>
                         <input
-                        type="date" name="date" value="2022-01-01" min="2022-01-01" max="2024-12-31">
+                        type="date" name="date" value="2022-01-01" min="2022-01-01" max="2024-12-31" id="startT">
                         <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
                         <label for="appt">
                             <a href="#">Time range for events(end):</a>
                         </label>
                         <input
-                        type="date" name="date" value="2022-01-02" min="2022-01-02" max="2024-12-31">
+                        type="date" name="date" value="2022-01-02" min="2022-01-02" max="2024-12-31" id="endT">
                         <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
                         <br><br>
-                        <input type="button" onclick="submitFunction()" value="Submit form">
+                        <input type="submit"  value="Submit form">
                     <!-- <input type="submit" value="Submit"> -->
                         <!-- <a href="#" class="btn" id="submit">Submit</a> -->
                     </form>
@@ -161,7 +162,7 @@
 
             <div class="swiper-container home-slider">
                 <div class="swiper-wrapper">
-                    <div><img src="exercise/slide-1.jpg" alt=""></div>
+                    <!-- <div><img src="exercise/slide-1.jpg" alt=""></div> -->
                     <div class="swiper-slide">
                         <div class="card-header">
                             <h1>Beach BBQ</h1>
@@ -213,6 +214,6 @@
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <!-- custom js file link  -->
-        <script src="js/script.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 </html>
