@@ -27,7 +27,7 @@ emailSU.value="";
 passwordSU.value="";
 userName.value="" 
      // window.alert(`Email:${data.email} added sucessfully,Thank you for your signup,please register your information through sign in page`)
-          })
+        })
 
 }
 signupForm.addEventListener('submit',sendSignup)
