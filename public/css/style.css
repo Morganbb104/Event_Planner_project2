@@ -762,9 +762,15 @@ select {
   }
 }
 
-
 .form-group {
   text-align: center;
   color: #fff;
   padding: 15px;
+}
+
+/* see event details page for this image */
+.event-img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
 }
