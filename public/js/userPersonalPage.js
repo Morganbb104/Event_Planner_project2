@@ -55,11 +55,12 @@ const getYourEvent = async () => {
             .then(data => {
                 
                 const localDate = new Date(data.startDate);
+                // change background color without covering other cards 
                 const cardBody = `
                 <div class="card-header">
-                    <h1>${localDate}</h1>
+                    <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
                 </div>
-                <div class="card-body">
+                <div class="card-body card-body-bg"> 
                     <p>
                         ${data.description}
                     </p>
@@ -103,9 +104,9 @@ const getCreatedEvent = async () => {
         const localDate = new Date(event.startDate);
         const cardBody = `
         <div class="card-header">
-            <h1>${localDate}</h1>
+            <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
         </div>
-        <div class="card-body">
+        <div class="card-body card-body-bg">
             <p>
                 ${event.description}
             </p>
