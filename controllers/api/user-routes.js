@@ -42,7 +42,7 @@ router.post('/user/signup', async (req, res) => {
             ${userData.email} Please go to Login page to sign in`,
       });
     });
-});
+  } );
 
 // display stored User data
 router.get('/', async (req, res) => {
