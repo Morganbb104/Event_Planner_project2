@@ -25,7 +25,7 @@ const createEvent = async (event) =>{
     };
 
     //sending event details to the server using POST request
-    const fetchNewEvent = await fetch('/events', {
+    const fetchNewEvent = await fetch('/api/events', {
         method: 'POST',
         headers:{
             'content-type': 'application/json',
