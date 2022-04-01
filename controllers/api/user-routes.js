@@ -77,19 +77,24 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 // route to update user info
-router.put('/update', async (req, res) => {
-  const userData = await User.update(
-    { password: req.body.newPassword },
-    {
-      where: {
-        email: req.body.email,
-      },
-      individualHooks: true,
-    }
-  );
-  console.log(userData);
+router.put('/update',async (req, res) => {
+  const checkEmail=await User.findOne({where:{email:req.body.email}});
+  console.log(checkEmail)
+  const checkPassword= await checkEmail.checkPassword(req.body.oldPassword);
+  console.log(checkPassword)
+  if(checkPassword===true){
+const updateData=await User.update({password:req.body.newPassword},{
+  where:{ email:req.body.email},
+  individualHooks:true
 });
+res.json({message:"updated"})
+}else{
+res.json({message:"please check your email or password and Try Again!!"})
+  }
+});
+
+
+
 
 module.exports = router;
