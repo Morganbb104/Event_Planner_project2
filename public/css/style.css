@@ -152,6 +152,13 @@ section {
   object-fit: cover;
 }
 
+.home-slider *,
+.home-slider *:before,
+.home-slider *:after {
+  animation-play-state: paused !important;
+}
+
+
 .service .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));

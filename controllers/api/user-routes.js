@@ -27,6 +27,7 @@ router.post('/signup', async (req, res) => {
       res.json({
         message: `Your Email has beed added sucessfully \n--------------------------------------------
             ${userData.email} Please go to Login page to sign in`,
+        code: 201
       });
     });
   } catch (err) {

@@ -1,6 +1,6 @@
-
-
-var swiper = new Swiper("#home-slider", {
+setTimeout(() => {
+  // Timeout to set time interval in order to let swiper function has enough time to run
+  var swiper = new Swiper(".home-slider", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -14,7 +14,7 @@ var swiper = new Swiper("#home-slider", {
     },
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   });
@@ -40,3 +40,8 @@ var swiper = new Swiper("#home-slider", {
       disableOnInteraction: false,
     },
   });
+
+}, 200)
+
+// https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+//https://www.youtube.com/watch?v=QVEgGy24Oqc&t=2027

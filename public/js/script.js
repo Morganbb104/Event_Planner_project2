@@ -221,8 +221,21 @@ const submitFunction = async (e) => {
     })
 } 
 
+const logOutButton = document.querySelector('#log-out');
+
+const logOut = (e) => {
+  e.preventDefault();
+
+
+  localStorage.clear();
+
+  alert('Log out')
+
+  window.location.pathname = '/home'
+
+}
+
 
 form.addEventListener('submit', submitFunction);
-
-
+logOutButton.addEventListener('click', logOut)
 // submitButton.addEventListener('submit', submitFunction)
