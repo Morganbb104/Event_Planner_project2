@@ -1,7 +1,9 @@
 const routes=require('express').Router();
 const { accessSync } = require('fs');
 const path=require('path')
-routes.get('/signin',(req,res)=>{
+
+
+routes.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'../views/login.html'))
 })
 routes.get('/signup',(req,res)=>{
@@ -10,9 +12,7 @@ routes.get('/signup',(req,res)=>{
 routes.get('/home',async (req,res)=>{
     res.render('homePage')
 })
-routes.get('/login',async (req,res)=>{
-    res.render('login')
-})
+
 
 routes.get("/createEvent",async(req,res)=>{
     res.render('createEvent')
@@ -21,4 +21,9 @@ routes.get("/createEvent",async(req,res)=>{
 routes.get("/userPersonalPage",async(req,res)=>{
     res.render('userPersonalPage')
 })
+
+routes.get('/detail', async (req, res) => {
+    res.render('eventDetail')
+})
+
 module.exports=routes;

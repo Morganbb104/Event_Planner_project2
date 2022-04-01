@@ -44,10 +44,10 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [
-      { model: User, through: Rsvp, as: 'Attendees' },
-      { model: Comment },
-    ],
+    // include: [
+    //   { model: User, through: Rsvp, as: 'Attendees' },
+    //   { model: Comment },
+    // ],
   })
     .then((results) => {
       // if no results, respond with 404 and inform user no results found for that ID
@@ -110,3 +110,5 @@ router.put('/:id', (req, res) => {
     }
   );
 });
+
+module.exports = router;
