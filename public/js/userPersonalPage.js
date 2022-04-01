@@ -1,6 +1,6 @@
 const user = JSON.parse(localStorage.getItem('user'))
 
-console.log(user)
+// console.log(user)
 
 const cardContainer = document.querySelector('#card-container')
 
@@ -9,7 +9,11 @@ const getYourEvent = async () => {
 
     const data = await rsvpResponse.json();
 
+    console.log(data)
+
     const rsvp = data.filter(e => e.userId === user.id)
+
+    console.log(rsvp)
 
     rsvp.forEach(event => {
         const card = document.createElement('div')
