@@ -6,7 +6,6 @@ const req = require('express/lib/request');
 const path = require('path');
 const User = require('../../models/User');
 
-<<<<<<< HEAD
 
 
 
@@ -35,23 +34,6 @@ router.post('/user/signup', async (req, res) => {
 
     } catch (err) {
         res.status(404).json({message:'Invalid Email or password'})
-=======
-// adding new user through signup form
-router.post('/signup', async (req, res) => {
-  const signupdata = {
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
-  };
-  try {
-    const userData = await User.create(signupdata);
-    if (!userData) {
-      res.status(404).json({
-        message:
-          'please take look on your information again,it seems you had a mistake through write it',
-      });
-      return;
->>>>>>> 6d2b0f290b3b1c8517b37f0c0a3a4ae850437417
     }
     req.session.save(() => {
       req.session.loggedIn = true;
@@ -60,9 +42,6 @@ router.post('/signup', async (req, res) => {
             ${userData.email} Please go to Login page to sign in`,
       });
     });
-  } catch (err) {
-    res.status(404).json({ message: 'Invalid Email or password' });
-  }
 });
 
 // display stored User data
