@@ -561,15 +561,18 @@ section{
     color: #fff;
   }
   
+  .party { 
+    background:
+    /* linear-gradient(to bottom left,transparent 49.5%,#fff 50%) 0 50px/100% 100px,
+    linear-gradient(#fff,#fff) bottom/100% calc(100% - 150px), */
+    url(https://www.washingtonpost.com/resizer/9YWv-qOa9uW7CQZ9UGiW23eTZzU=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BTCNJJN2Y43KPHPXPQWPASXRKM.jpg) top/100% auto no-repeat;
+  }
+
   .card-body {
     padding: 30px 20px;
     text-align: center;
     font-size: 18px;
     /* background-color: #eee; */
-    background:
-    /* linear-gradient(to bottom left,transparent 49.5%,#fff 50%) 0 50px/100% 100px,
-    linear-gradient(#fff,#fff) bottom/100% calc(100% - 150px), */
-    url(https://www.washingtonpost.com/resizer/9YWv-qOa9uW7CQZ9UGiW23eTZzU=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BTCNJJN2Y43KPHPXPQWPASXRKM.jpg) top/100% auto no-repeat;
     background-repeat:no-repeat;
     /* height: 10rem ;
     width: auto; */

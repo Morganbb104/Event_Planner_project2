@@ -7,7 +7,7 @@ const path = require('path');
 const User = require('../../models/User');
 
 // adding new user through signup form
-router.post('/user/signup', async (req, res) => {
+router.post('/signup', async (req, res) => {
   const signupdata = {
     username: req.body.username,
     email: req.body.email,
@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
 });
 
 //check user info through signin page
-router.post('/user/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { email: req.body.email },
@@ -70,15 +70,16 @@ router.post('/user/login', async (req, res) => {
       req.session.user_id = userData.id;
       req, (session.logged_in = true);
 
-      res.json({ message: 'Your logging in' });
+      res.status(200).json({ message: 'Your logging in', status: 200, userInfo: userData });
     });
   } catch (err) {
     res.status(404).json({ message: 'check email or password and try again' });
   }
 });
 
+
 // route to update user info
-router.put('/user/update', async (req, res) => {
+router.put('/update', async (req, res) => {
   const userData = await User.update(
     { password: req.body.newPassword },
     {
