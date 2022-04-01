@@ -758,3 +758,10 @@ select {
     width: 100%;
   }
 }
+
+
+.form-group {
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+}
