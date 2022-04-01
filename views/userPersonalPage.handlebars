@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Profile</title>
-    <link
-    rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <!-- font awesome cdn link  -->
-    <link
-    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="header">
+<header class="header">
 
-        <a href="#" class="logo">
+        <a href="/home" class="logo">
             <span>E</span>vent Planner</a>
 
         <nav class="navbar">
-            <a href="#event">event</a>
+            <a href="/home">event</a>
             <a href="#logIn">log in</a>
             <a href="#signUp">sign up</a>
             <a href="#yourProfile">your profile</a>
@@ -50,8 +34,9 @@
         <!-- <div class="heading">
             <h1>Css Responsive Flexbox Cards</h1>
           </div> -->
-          <div class="row">
-            <div class="card">
+          <div class="row" id="card-container">
+
+            <div class="card" >
               <div class="card-header">
                 <h1>Event 1</h1>
               </div>
@@ -62,6 +47,8 @@
                 <a href="#" class="btn">Read more</a>
               </div>
             </div>
+
+            
             <div class="card">
                 <div class="card-header">
                   <h1>Event 2</h1>
@@ -85,11 +72,11 @@
                 </div>
               </div>
 
+          </div>
+
 
     </section>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
-</body>
-</html>
+    <script src="js/userPersonalPage.js"></script>

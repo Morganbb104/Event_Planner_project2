@@ -47,15 +47,17 @@
 
             </div>
             <!-- The Modal -->
-            <div 
+            <div
                 id="myModal" class="modal">
 
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <form id="form">
-                        <label for="states"><a href="#">Choose a state:</a></label>
-                        <select class ="states" name="states" id="states" size="1">
+                        <label for="states">
+                            <a href="#">Choose a state:</a>
+                        </label>
+                        <select class="states" name="states" id="states" size="1">
                             <option value="AL">AL,Alabama</option>
                             <option value="AK">AK,Alaska</option>
                             <option value="AZ">AZ,Arizona</option>
@@ -107,25 +109,37 @@
                             <option value="WV">WV,West Virginia</option>
                             <option value="WI">WI,Wisconsin</option>
                             <option value="WY">WY,Wyoming</option>
+                            <option value="all">All States</option>
                         </select>
                         <br><br>
-                        <label for="event_category"><a href="#">Choose a category:</a></label>
-                        <select class ="event_category" name="event_category" id="event_category" size="1">
-                            <option value="volvo">wedding</option>
-                            <option value="saab">Exercising</option>
-                            <option value="opel">Homeparty</option>
-                            <option value="audi">others</option>
+                        <label for="event_category">
+                            <a href="#">Choose a category:</a>
+                        </label>
+                        <select class="event_category" name="event_category" id="event_category" size="1">
+                            <option value="Concert">Concert</option>
+                            <option value="Theatre">Theatre</option>
+                            <option value="Party">Party</option>
+                            <option value="Food & Drink">Food & Drink</option>
+                            <option value="Career">Career & Development</option>
+                            <option value="Other">Other</option>
+                            <option value="allCatergory">All</option>
                         </select>
                         <br><br>
-                        <label for="appt"><a href="#">Time range for events(start):</a></label>
-                        <input type="date" name="date" value="2022-01-01" min="2022-01-01" max="2024-12-31">
+                        <label for="appt">
+                            <a href="#">Time range for events(start):</a>
+                        </label>
+                        <input
+                        type="date" name="date" value="2022-01-01" min="2022-01-01" max="2024-12-31">
                         <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
-                        <label for="appt"><a href="#">Time range for events(end):</a></label>
-                        <input type="date" name="date" value="2022-01-02" min="2022-01-02" max="2024-12-31">
+                        <label for="appt">
+                            <a href="#">Time range for events(end):</a>
+                        </label>
+                        <input
+                        type="date" name="date" value="2022-01-02" min="2022-01-02" max="2024-12-31">
                         <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
                         <br><br>
-                        <input type="button" onclick="submitFunction()" value="Submit form">
-                        <!-- <input type="submit" value="Submit"> -->
+                        <input class="submit_button" type="button" onclick="submitFunction()" value="Submit form">
+                    <!-- <input type="submit" value="Submit"> -->
                         <!-- <a href="#" class="btn" id="submit">Submit</a> -->
                     </form>
 
@@ -134,26 +148,38 @@
             </div>
 
             <!-- <div class="swiper-container home-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/slide-1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/slide-2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/slide-3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/slide-4.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/slide-5.jpg" alt=""></div>
-                    -->
-                    <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div>
-                </div>
-            </div> -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/slide-1.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-3.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-4.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-5.jpg" alt=""></div>
+                                -->
+            <!-- <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div>
+                            </div>
+                        </div>  -->
 
             <div class="swiper-container home-slider">
                 <div class="swiper-wrapper">
+                    <div><img src="exercise/slide-1.jpg" alt=""></div>
+                    <div class="swiper-slide">
+                        <div class="card-header">
+                            <h1>Beach BBQ</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Summer beach activities include fun ideas for kids and parties. Make sandcastles, ponds, take pictures, relax and make beach memories.
+                            </p>
+                            <a href="#" class="btn">Washington</a>
+                            <a href="#" class="btn">Sep 21nd 2022 11:30am</a>
+                            <a href="#" class="btn">Party</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">XXX</div>
                     <div class="swiper-slide"></div>
                     <div class="swiper-slide"></div>
                     <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    -->
-                    <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/exercise.jpg" alt=""></div>
                 </div>
             </div>
         </section>

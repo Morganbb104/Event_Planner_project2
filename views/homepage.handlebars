@@ -1,0 +1,211 @@
+<header class="header">
+
+    <a href="/home" class="logo">
+        <span>E</span>vent Planner</a>
+
+    <nav class="navbar">
+        <a href="/home">event</a>
+        <a href="/logIn">log in</a>
+        <a href="/signUp">sign up</a>
+        <a href="/userPersonalPage">your profile</a>
+        {{!-- <a href="/contact">contact</a> --}}
+    </nav>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+</header>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Connect Everyone around you!
+            <span>
+                Best event planner
+            </span>
+        </h3>
+        <a href="/userPersonalPage" class="btn">Your Profile</a>
+        <a class="btn" id="myBtn">Event Filter</a>
+
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="form">
+                <label for="states">
+                    <a>Choose a state:</a>
+                </label>
+                <select class="states" name="states" id="states" size="1">
+                    <option value="AL">AL,Alabama</option>
+                    <option value="AK">AK,Alaska</option>
+                    <option value="AZ">AZ,Arizona</option>
+                    <option value="AR">AR,Arkansas</option>
+                    <option value="CA">CA,California</option>
+                    <option value="CO">CO,Colorado</option>
+                    <option value="CT">CT,Connecticut</option>
+                    <option value="DE">DE,Delaware</option>
+                    <option value="DC">DC,District of Columbia</option>
+                    <option value="FL">FL,Florida</option>
+                    <option value="GA">GA,Georgia</option>
+                    <option value="HI">HI,Hawaii</option>
+                    <option value="ID">ID,Idaho</option>
+                    <option value="IL">IL,Illinois</option>
+                    <option value="IN">IN,Indiana</option>
+                    <option value="IA">IA,Iowa</option>
+                    <option value="KS">KS,Kansas</option>
+                    <option value="KY">KY,Kentucky</option>
+                    <option value="LA">LA,Louisiana</option>
+                    <option value="ME">ME,Maine</option>
+                    <option value="MD">MD,Maryland</option>
+                    <option value="MA">MA,Massachusetts</option>
+                    <option value="MI">MI,Michigan</option>
+                    <option value="MN">MN,Minnesota</option>
+                    <option value="MS">MS,Mississippi</option>
+                    <option value="MO">MO,Missouri</option>
+                    <option value="MT">MT,Montana</option>
+                    <option value="NE">NE,Nebraska</option>
+                    <option value="NV">NV,Nevada</option>
+                    <option value="NH">NH,New Hampshire</option>
+                    <option value="NJ">NJ,New Jersey</option>
+                    <option value="NM">NM,New Mexico</option>
+                    <option value="NY">NY,New York</option>
+                    <option value="NC">NC,North Carolina</option>
+                    <option value="ND">ND,North Dakota</option>
+                    <option value="OH">OH,Ohio</option>
+                    <option value="OK">OK,Oklahoma</option>
+                    <option value="OR">OR,Oregon</option>
+                    <option value="PA">PA,Pennsylvania</option>
+                    <option value="RI">RI,Rhode Island</option>
+                    <option value="SC">DC,South Carolina</option>
+                    <option value="SD">SD,South Dakota</option>
+                    <option value="TN">TN,Tennessee</option>
+                    <option value="TX">TX,Texas</option>
+                    <option value="UT">UT,Utah</option>
+                    <option value="VT">VT,Vermont</option>
+                    <option value="VA">VA,Virginia</option>
+                    <option value="WA">WA,Washington</option>
+                    <option value="WV">WV,West Virginia</option>
+                    <option value="WI">WI,Wisconsin</option>
+                    <option value="WY">WY,Wyoming</option>
+                    <option value="all" selected>All States</option>
+                </select>
+                <br><br>
+                <label for="event_category">
+                    <a>Choose a category:</a>
+                </label>
+                <select class="event_category" name="event_category" id="event_category" size="1">
+                    <option value="Concert">Concert</option>
+                    <option value="Theatre">Theatre</option>
+                    <option value="Party">Party</option>
+                    <option value="Foodanddrink">Food & Drink</option>
+                    <option value="Career">Career & Development</option>
+                    <option value="Other">Other</option>
+                    <option value="allCatergory" selected>All</option>
+                </select>
+                <br><br>
+                <label for="appt">
+                    <a>Time range for events(start):</a>
+                </label>
+                <input id="startT" type="date" name="date" value="2022-01-01" min="2022-01-01" max="2024-12-31">
+                <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
+                <label for="appt">
+                    <a>Time range for events(end):</a>
+                </label>
+                <input id="endT" type="date" name="date" value="2022-12-31" min="2022-01-02" max="2024-12-31">
+                <!-- <input type="time" id="appt" name="appt" min="09:00" max="22:00" required> -->
+                <br><br>
+                {{!-- <input class="submit_button" id="submit-button" type="button" onclick="submitFunction()"
+                    value="Submit form">
+                --}}
+                <button class="submit_button" id="submit-button" type="submit"> Submit </button>
+                <!-- <input type="submit" value="Submit"> -->
+                <!-- <a href="#" class="btn" id="submit">Submit</a> -->
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- <div class="swiper-container home-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/slide-1.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-3.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-4.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="images/slide-5.jpg" alt=""></div>
+                                -->
+    <!-- <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div>
+                            </div>
+                        </div>  -->
+
+    <div class="swiper-container home-slider" id="home-slider">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+            {{!-- <div class="swiper-slide">
+                <div class="card-header">
+                    <h1>Beach BBQ</h1>
+                </div>
+                <div class="card-body party">
+                    <p>
+                        Summer beach activities include fun ideas for kids and parties. Make sandcastles, ponds,
+                        take
+                        pictures, relax and make beach memories.
+                    </p>
+                    <a href="#" class="btn">Washington</a>
+                    <a href="#" class="btn">Sep 21nd 2022 11:30am</a>
+                    <a href="#" class="btn">Party</a>
+                </div>
+            </div> --}}
+            {{!-- <div class="swiper-slide">XXX</div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"><img src="images/exercise.jpg" alt=""></div> --}}
+        </div>
+    </div>
+</section class="container">
+
+<!-- home section ends-->
+
+<section class="container">
+    <div class="row" id="bottom-card">
+
+    </div>
+</section>
+{{!-- <div class="row container" id="bottom_card">
+
+
+</div> --}}
+
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading">
+        <span>about</span>
+        us
+    </h1>
+
+    <div class="row">
+        <div class="content">
+            <h3>Join or create event as you want
+            </h3>
+            <p>You can create event wherever and whenever you want</p>
+            <p>Manage your event which you're going to in our friendly profile with you</p>
+            <a href="#" class="btn">contact us</a>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="js/swiper.js"></script>
+<!-- custom js file link  -->
