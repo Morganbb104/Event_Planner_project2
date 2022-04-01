@@ -1,3 +1,26 @@
+const profileBtn = document.querySelector('#profile')
+const loginBtn = document.querySelector('#login')
+const logOutButton = document.querySelector('#log-out');
+const signUpBtn = document.querySelector('#sign-up')
+
+const user = JSON.parse(localStorage.getItem('user'))
+
+// Get user's item from localstorage
+if(user) {
+  profileBtn.classList.remove('hide');
+  logOutButton.classList.remove('hide');
+  
+  signUpBtn.classList.add('hide')
+  loginBtn.classList.add('hide')
+
+} else {
+  profileBtn.classList.add('hide');
+  logOutButton.classList.add('hide');
+  
+  signUpBtn.classList.remove('hide')
+  loginBtn.classList.remove('hide')
+
+}
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -221,7 +244,6 @@ const submitFunction = async (e) => {
     })
 } 
 
-const logOutButton = document.querySelector('#log-out');
 
 const logOut = (e) => {
   e.preventDefault();

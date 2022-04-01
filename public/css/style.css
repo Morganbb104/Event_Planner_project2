@@ -24,6 +24,10 @@
   transition: 0.2s linear;
 }
 
+.hide {
+  display: none;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
