@@ -13,6 +13,7 @@ const submitButton = document.querySelector('#create-submit')
 const createEvent = async (event) =>{
     event.preventDefault();
 
+    
     const eventBody = {
         location: eventLocation.value.trim(),
         state: eventState.value,
@@ -32,6 +33,15 @@ const createEvent = async (event) =>{
         },
         body: JSON.stringify(fetchNewEvent),
     })
+
+    //if the submission is successful then go to the users personal page
+    if(fetchNewEvent.ok){
+        document.location.replace('/userPersonalPage');
+    }
+    //otherwise if it doesn't work then send text notification of error
+    else{
+        alert(fetchNewEvent.statusText);
+    }
 }
 
 //on submit button being clicked then add the details.
