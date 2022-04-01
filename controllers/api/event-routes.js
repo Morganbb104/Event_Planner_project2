@@ -22,7 +22,8 @@ router.post('/', (req, res) => {
     category: req.body.category,
     startTime: req.body.startTime,
     endTime: req.body.endTime,
-    date: req.body.date,
+    startDate: req.body.startDate,
+    endDate: req.body.endDate,
     description: req.body.description,
     hostId: req.body.hostId,
   })
@@ -43,10 +44,10 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [
-      { model: User, through: Rsvp, as: 'Attendees' },
-      { model: Comment },
-    ],
+    // include: [
+    //   { model: User, through: Rsvp, as: 'Attendees' },
+    //   { model: Comment },
+    // ],
   })
     .then((results) => {
       // if no results, respond with 404 and inform user no results found for that ID
@@ -98,7 +99,8 @@ router.put('/:id', (req, res) => {
       category: req.body.category,
       startTime: req.body.startTime,
       endTime: req.body.endTime,
-      date: req.body.date,
+      startDate: req.body.startDate,
+      endDate: req.body.endDate,
       description: req.body.description,
     },
     {
@@ -108,3 +110,5 @@ router.put('/:id', (req, res) => {
     }
   );
 });
+
+module.exports = router;
