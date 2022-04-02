@@ -189,7 +189,7 @@ const submitFunction = async (e) => {
 
 
     for(let i = 0; i < data.length; i++) {
-      if(data[i] && i < 6) {
+      if(data[i] && i < 20) {
         const event = data[i]
   
         const swiperSlide = document.createElement("div");
