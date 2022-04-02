@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
     startDate: req.body.startDate,
     endDate: req.body.endDate,
     description: req.body.description,
-    hostId: req.body.hostId,
+    hostId: req.body.hostId,// we must have hostID in request body 
   })
     .then((results) => {
       res.json({

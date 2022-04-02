@@ -31,7 +31,7 @@ const createEvent = async (event) =>{
         headers:{
             'content-type': 'application/json',
         },
-        body: JSON.stringify(fetchNewEvent),
+        body: JSON.stringify(eventBody),
     })
 
     //if the submission is successful then go to the users personal page
