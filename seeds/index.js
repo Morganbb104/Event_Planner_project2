@@ -5,7 +5,7 @@ const seedRsvp = require('./rsvp_seeds');
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-    await sequelize.sync({force:true});
+    await sequelize.sync({force:false});
     console.log(`DB SYNCED`);
     await seedUsers();
     console.log('USERS SEEDED');

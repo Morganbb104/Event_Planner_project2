@@ -33,7 +33,7 @@ const sendData = async (e) => {
     if(response.status === 200) {
         localStorage.setItem('user', JSON.stringify(response.userInfo))
 
-        window.location.pathname = '/home'
+        window.location.pathname = '/'
     }
 
     window.alert(response.message);

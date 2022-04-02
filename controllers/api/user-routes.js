@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-// const { User } = require('../../models');
-=======
->>>>>>> 44d760bd0f9771241f6068e2dbc2d1119bf98f01
+// <<<<<<< HEAD
+// // const { User } = require('../../models');
+// =======
+// >>>>>>> 44d760bd0f9771241f6068e2dbc2d1119bf98f01
 
 const router = require('express').Router();
 const session = require('express-session');
@@ -39,13 +39,13 @@ router.post('/signup', async (req, res) => {
     } catch (err) {
         res.status(404).json({message:'Invalid Email or password'})
     }
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.json({
-        message: `Your Email has beed added sucessfully \n--------------------------------------------
-            ${userData.email} Please go to Login page to sign in`,
-      });
-    });
+    // req.session.save(() => {
+    //   req.session.loggedIn = true;
+    //   res.json({
+    //     message: `Your Email has beed added sucessfully \n--------------------------------------------
+    //         ${userData.email} Please go to Login page to sign in`,
+    //   });
+    // });
 });
 
 // display stored User data

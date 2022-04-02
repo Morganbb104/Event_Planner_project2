@@ -253,7 +253,7 @@ const logOut = (e) => {
 
   alert('Log out')
 
-  window.location.pathname = '/home'
+  window.location.pathname = '/'
 
 }
 
