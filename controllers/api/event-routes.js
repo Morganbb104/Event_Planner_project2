@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
     startDate: req.body.startDate,
     endDate: req.body.endDate,
     description: req.body.description,
-    hostId: req.body.hostId,
+    hostId: req.body.hostId,// we must have hostID in request body 
   })
     .then((results) => {
       res.json({
@@ -44,10 +44,10 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [
-      { model: User, through: Rsvp, as: 'Attendees' },
-      { model: Comment },
-    ],
+    // include: [
+    //   { model: User, through: Rsvp, as: 'Attendees' },
+    //   { model: Comment },
+    // ],
   })
     .then((results) => {
       // if no results, respond with 404 and inform user no results found for that ID
@@ -110,3 +110,5 @@ router.put('/:id', (req, res) => {
     }
   );
 });
+
+module.exports = router;
