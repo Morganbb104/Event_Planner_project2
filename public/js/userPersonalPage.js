@@ -2,7 +2,7 @@ const cardContainer = document.querySelector('#card-container')
 const attendedBtn = document.querySelector('#attended-event')
 const createdBtn = document.querySelector('#created-event')
 const logOutButton = document.querySelector('#log-out');
-
+const createEventBtn = document.querySelector('#create-event') 
 
 
 const user = JSON.parse(localStorage.getItem('user'))
@@ -123,8 +123,15 @@ const getCreatedEvent = async () => {
 }
 
 
+
+
 getYourEvent()
 
 logOutButton.addEventListener('click', logOut)
 attendedBtn.addEventListener('click', getYourEvent)
 createdBtn.addEventListener('click', getCreatedEvent)
+createEventBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    window.location.pathname = '/createEvent'
+})
