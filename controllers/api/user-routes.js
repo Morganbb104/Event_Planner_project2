@@ -12,7 +12,7 @@ const User = require('../../models/User');
 
 
 // adding new user through signup form 
-router.post('/user/signup', async (req, res) => {
+router.post('/signup', async (req, res) => {
     const signupdata = {
         username: req.body.username,
         email: req.body.email,
@@ -26,23 +26,18 @@ router.post('/user/signup', async (req, res) => {
             return
         }
         req.session.save(() => {
-            req.session.loggedIn = true;
-            res.json({message:`Your Email has been added sucessfully \n--------------------------------------------
-            ${userData.email} Please go to Login page to sign in`})
-
-        })
+          req.session.loggedIn = true;
+          res.json({
+            message: `Your Email has beed added sucessfully \n--------------------------------------------
+                ${userData.email} Please go to Login page to sign in`,
+            code: 201
+          });
+        });
 
     } catch (err) {
         res.status(404).json({message:'Invalid Email or password'})
     }
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.json({
-        message: `Your Email has beed added sucessfully \n--------------------------------------------
-            ${userData.email} Please go to Login page to sign in`,
-        code: 201
-      });
-    });
+
   } );
 
 // display stored User data
