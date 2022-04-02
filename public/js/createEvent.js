@@ -32,7 +32,7 @@ const createEvent = async (event) =>{
             'content-type': 'application/json',
         },
         body: JSON.stringify(eventBody),
-    })
+    });
 
     //if the submission is successful then go to the users personal page
     if(fetchNewEvent.ok){

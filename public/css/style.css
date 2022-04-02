@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap');
 
+body{
+  color: white;
+}
 .submit_button {
   cursor: pointer;
   font-size: 3rem;  
@@ -800,4 +803,17 @@ select {
   .contact form .inputBox input {
     width: 100%;
   }
+}
+
+.form-group {
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+}
+
+/* see event details page for this image */
+.event-img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
 }
