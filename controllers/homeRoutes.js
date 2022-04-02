@@ -10,7 +10,7 @@ routes.get('/signup',(req,res)=>{
     res.sendFile(path.join(__dirname,'../views/signup.html'))
 })
 routes.get('/',async (req,res)=>{
-    res.render('homePage')
+    res.render('homepage')
 })
 
 
