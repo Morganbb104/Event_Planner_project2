@@ -1,8 +1,6 @@
-// const { User } = require('../../models');
 
 const router = require('express').Router();
 const session = require('express-session');
-const req = require('express/lib/request');
 const path = require('path');
 const User = require('../../models/User');
 
@@ -79,20 +77,26 @@ router.post('/login', async (req, res) => {
 
 
 // route to update user info
-router.put('/user/update',async (req, res) => {
+router.put('/update',async (req, res) => {
+  console.log("recived uodate hereeeeeeeeeeee",req.body)
   const checkEmail=await User.findOne({where:{email:req.body.email}});
   console.log(checkEmail)
+  console.log('email checked')
   const checkPassword= await checkEmail.checkPassword(req.body.oldPassword);
+  console.log(checkPassword)
   if(checkPassword===true){
       console.log('you can update it both Email and password true ');
 
-const updateData=await User.update({password:req.body.newPassword},{
-  where:{ email:req.body.email}
-});
-console.log(updateData)
-  }else{
-      console.log('you cannot update it,it seems user wrote something wrong ')
 
+
+const updateData=await User.update({password:req.body.newPassword},{
+  where:{ email:req.body.email},
+  individualHooks:true
+});
+console.log('after update')
+res.json({message:"updated"})  
+}else{
+res.json({message:"please check your email or password and Try Again!!!"})
   }
 });
 

@@ -12,17 +12,17 @@ const modalFun = async (e) => {
     newPassword: modalNewPass.value.trim(),
   };
   console.log(modalData);
-  const fetchModalData = await fetch('/user/update', {
+  const fetchModalData = await fetch('api/user/update', {
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(modalData),
   });
   const response = await fetchModalData.json().then((data) => {
-    window.alert('your information has been updated');
+    window.alert(data.message);
 
-    modalEmail.value = '';
-    modalNewPass.value = '';
-    modalOldPass.value = '';
+    modalEmail.value = "";
+    modalNewPass.value = "";
+    modalOldPass.value = "";
   });
 };
 
