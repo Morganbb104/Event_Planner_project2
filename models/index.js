@@ -14,6 +14,8 @@ Event.belongsToMany(User, {
   through: Rsvp,
   foreignKey: 'eventId',
 });
+Rsvp.belongsTo(User)
+
 
 module.exports = {
   Comment,
