@@ -10,9 +10,9 @@ const modalFun = async (e) => {
     newPassword: modalNewPass.value.trim(),
   };
   console.log(modalData);
-  const fetchModalData = await fetch("api/user/update", {
-    method:"PUT",
-    headers: { "content-type": "application/json" },
+  const fetchModalData = await fetch('api/user/update', {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
     body: JSON.stringify(modalData),
   });
   const response = await fetchModalData.json().then((data) => {
