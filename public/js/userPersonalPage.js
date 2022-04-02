@@ -35,7 +35,7 @@ const getYourEvent = async () => {
 
     const data = await rsvpResponse.json();
 
-    // console.log(data)
+    console.log(data)
     //get the user.id and save it into rsvp
     const rsvp = data.filter(e => e.userId === user.id)
 
