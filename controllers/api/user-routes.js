@@ -4,33 +4,39 @@ const session = require('express-session');
 const path = require('path');
 const User = require('../../models/User');
 
-// adding new user through signup form
+
+
+
+
+
+// adding new user through signup form 
 router.post('/signup', async (req, res) => {
-  const signupdata = {
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
-  };
-  try {
-    const userData = await User.create(signupdata);
-    if (!userData) {
-      res.status(404).json({
-        message:
-          'please take look on your information again,it seems you had a mistake through write it',
-      });
-      return;
+    const signupdata = {
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+
+    };
+    try {
+        const userData = await User.create(signupdata);
+        if (!userData) {
+            res.status(404).json({ message: 'please take look on your information again,it seems you had a mistake through write it' })
+            return
+        }
+        req.session.save(() => {
+          req.session.loggedIn = true;
+          res.json({
+            message: `Your Email has beed added sucessfully \n--------------------------------------------
+                ${userData.email} Please go to Login page to sign in`,
+            code: 201
+          });
+        });
+
+    } catch (err) {
+        res.status(404).json({message:'Invalid Email or password'})
     }
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.json({
-        message: `Your Email has beed added sucessfully \n--------------------------------------------
-            ${userData.email} Please go to Login page to sign in`,
-      });
-    });
-  } catch (err) {
-    res.status(404).json({ message: 'Invalid Email or password' });
-  }
-});
+
+  } );
 
 // display stored User data
 router.get('/', async (req, res) => {
@@ -75,20 +81,14 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 // route to update user info
 router.put('/update',async (req, res) => {
-  console.log("recived uodate hereeeeeeeeeeee",req.body)
   const checkEmail=await User.findOne({where:{email:req.body.email}});
   console.log(checkEmail)
   console.log('email checked')
   const checkPassword= await checkEmail.checkPassword(req.body.oldPassword);
   console.log(checkPassword)
   if(checkPassword===true){
-      console.log('you can update it both Email and password true ');
-
-
-
 const updateData=await User.update({password:req.body.newPassword},{
   where:{ email:req.body.email},
   individualHooks:true
@@ -99,5 +99,8 @@ res.json({message:"updated"})
 res.json({message:"please check your email or password and Try Again!!!"})
   }
 });
+
+
+
 
 module.exports = router;

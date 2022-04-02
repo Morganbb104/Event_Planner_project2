@@ -1,11 +1,9 @@
-const modalForm = document.getElementById('modalForm');
-const modalEmail = document.getElementById('modalEmail');
-const modalOldPass = document.getElementById('modalOldPass');
-const modalNewPass = document.getElementById('modalNewPass');
-
+const modalForm = document.getElementById("modalForm");
+const modalEmail = document.getElementById("modalEmail");
+const modalOldPass = document.getElementById("modalOldPass");
+const modalNewPass = document.getElementById("modalNewPass");
 const modalFun = async (e) => {
   e.preventDefault();
-
   const modalData = {
     email: modalEmail.value.trim(),
     oldPassword: modalOldPass.value.trim(),
@@ -19,11 +17,9 @@ const modalFun = async (e) => {
   });
   const response = await fetchModalData.json().then((data) => {
     window.alert(data.message);
-
     modalEmail.value = "";
     modalNewPass.value = "";
     modalOldPass.value = "";
   });
 };
-
-modalForm.addEventListener('submit', modalFun);
+modalForm.addEventListener("submit", modalFun);

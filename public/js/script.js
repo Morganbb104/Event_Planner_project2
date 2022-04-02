@@ -1,3 +1,26 @@
+const profileBtn = document.querySelector('#profile')
+const loginBtn = document.querySelector('#login')
+const logOutButton = document.querySelector('#log-out');
+const signUpBtn = document.querySelector('#sign-up')
+
+const user = JSON.parse(localStorage.getItem('user'))
+
+// Get user's item from localstorage
+if(user) {
+  profileBtn.classList.remove('hide');
+  logOutButton.classList.remove('hide');
+  
+  signUpBtn.classList.add('hide')
+  loginBtn.classList.add('hide')
+
+} else {
+  profileBtn.classList.add('hide');
+  logOutButton.classList.add('hide');
+  
+  signUpBtn.classList.remove('hide')
+  loginBtn.classList.remove('hide')
+
+}
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -51,20 +74,20 @@ const getAllEvents = async () => {
       const event = data[i]
 
       const swiperSlide = document.createElement("div");
-      swiperSlide.className += "swiper-slide";
+      swiperSlide.className += `swiper-slide ${event.category}`;
   
       const localDate = new Date(event.startDate);
       const cardBody = `
         <div class="card-header">
           <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
         </div>
-        <div class="card-body ${event.category}">
+        <div class="card-body">
             <p>
                 ${event.description}
             </p>
-            <a class="btn">${event.state}</a>
-            <a class="btn">${event.location} at ${event.startTime}</a>
-            <a class="btn">${event.category}</a>
+            <a class="btn opacity">${event.state}</a>
+            <a class="btn opacity">${event.location} at ${event.startTime}</a>
+            <a class="btn opacity">${event.category}</a>
         </div>
         
         `;
@@ -78,7 +101,7 @@ const getAllEvents = async () => {
 
   
     const swiperSlide = document.createElement("div");
-    swiperSlide.className += "card";
+    swiperSlide.className += `card ${event.category}`;
 
     const localDate = new Date(event.startDate);
 
@@ -86,7 +109,7 @@ const getAllEvents = async () => {
         <div class="card-header">
           <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
         </div>
-        <div class="card-body ${event.category}">
+        <div class="card-body">
           <p>
               ${event.description}
           </p>
@@ -170,14 +193,14 @@ const submitFunction = async (e) => {
         const event = data[i]
   
         const swiperSlide = document.createElement("div");
-        swiperSlide.className += "swiper-slide";
+        swiperSlide.className += `swiper-slide ${event.category}`;
     
         const localDate = new Date(event.startDate);
         const cardBody = `
           <div class="card-header">
             <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
           </div>
-          <div class="card-body ${event.category}">
+          <div class="card-body">
               <p>
                   ${event.description}
               </p>
@@ -198,7 +221,7 @@ const submitFunction = async (e) => {
     data.forEach(event => {
   
         const swiperSlide = document.createElement("div");
-        swiperSlide.className += "card";
+        swiperSlide.className += `card ${event.category}`;
     
         const localDate = new Date(event.startDate);
   
@@ -206,7 +229,7 @@ const submitFunction = async (e) => {
             <div class="card-header">
               <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
             </div>
-            <div class="card-body ${event.category}">
+            <div class="card-body">
               <p>
                   ${event.description}
               </p>
@@ -222,7 +245,19 @@ const submitFunction = async (e) => {
 } 
 
 
+const logOut = (e) => {
+  e.preventDefault();
+
+
+  localStorage.clear();
+
+  alert('Log out')
+
+  window.location.pathname = '/home'
+
+}
+
+
 form.addEventListener('submit', submitFunction);
-
-
+logOutButton.addEventListener('click', logOut)
 // submitButton.addEventListener('submit', submitFunction)
