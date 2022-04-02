@@ -40,6 +40,7 @@ router.post('/user/signup', async (req, res) => {
       res.json({
         message: `Your Email has beed added sucessfully \n--------------------------------------------
             ${userData.email} Please go to Login page to sign in`,
+        code: 201
       });
     });
   } );
@@ -87,23 +88,24 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 // route to update user info
-router.put('/user/update',async (req, res) => {
+router.put('/update',async (req, res) => {
   const checkEmail=await User.findOne({where:{email:req.body.email}});
   console.log(checkEmail)
   const checkPassword= await checkEmail.checkPassword(req.body.oldPassword);
+  console.log(checkPassword)
   if(checkPassword===true){
-      console.log('you can update it both Email and password true ');
-
 const updateData=await User.update({password:req.body.newPassword},{
-  where:{ email:req.body.email}
+  where:{ email:req.body.email},
+  individualHooks:true
 });
-console.log(updateData)
-  }else{
-      console.log('you cannot update it,it seems user wrote something wrong ')
-
+res.json({message:"updated"})
+}else{
+res.json({message:"please check your email or password and Try Again!!"})
   }
 });
+
+
+
 
 module.exports = router;

@@ -5,6 +5,7 @@ body{
 }
 .submit_button {
   cursor: pointer;
+  font-size: 3rem;  
 }
 
 .submit_button:hover {
@@ -25,6 +26,10 @@ body{
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
+}
+
+.hide {
+  display: none;
 }
 
 html {
@@ -147,6 +152,8 @@ section {
   border-radius: 0.5rem;
   height: 50rem;
   width: 35rem;
+  background-size: cover;
+  display: inline-grid;
 }
 
 .home .home-slider .swiper-slide img {
@@ -154,6 +161,21 @@ section {
   width: 100%;
   object-fit: cover;
 }
+
+.opacity {
+  opacity: 0.5;
+}
+
+.opacity:hover {
+  opacity: 1;
+}
+
+.home-slider *,
+.home-slider *:before,
+.home-slider *:after {
+  animation-play-state: paused !important;
+}
+
 
 .service .box-container {
   display: grid;
@@ -559,33 +581,46 @@ body {
 
 .card {
   width: 20%;
+  /* background: rgb(56, 53, 53); */
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 50px;
   transition: 0.3s;
+  display: inline-grid;
+  background-size: cover !important;
 }
+
 
 .card-header {
   text-align: center;
-  padding: 50px 10px;
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  font-size: 16px;
+  padding: 20px 10px;
+  /* background: linear-gradient(to right, #ff416c, #ff4b2b); */
+  background: linear-gradient(to right, #7141ff, #8a2bff);
+  max-height: 70%;
+  /* height: 80%; */
   color: #fff;
 }
 
 .party {
   background: blue top/100% auto no-repeat;
+  background-image: url('../images/party-2.jpg');
 }
 .theatre {
   background: green top/100% auto no-repeat;
+  background-image: url('../images/theater.jpg');
 }
 .concert {
   background: yellow top/100% auto no-repeat;
+  background-image: url('../images/concert.jpg');
 }
 .foodanddrink {
   background: violet top/100% auto no-repeat;
+  background-image: url('../images/foodanddrink3.jpg');
 }
 .career {
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%) top/100% auto no-repeat;
+  background-image: url('../images/Careers.jpg');
 }
 
 .card-body {
@@ -594,18 +629,26 @@ body {
   font-size: 18px;
   /* background-color: #eee; */
   background-repeat: no-repeat;
-  /* height: 10rem ;
-    width: auto; */
+  height: 100% ;
+  min-width: 100%;
+  
 }
+
+.card-body-bg {
+  background-color: #eee;
+}
+
+
 
 .card-body .btn {
   display: block;
-  color: #fff;
+  color: rgb(14, 14, 14);
   text-align: center;
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  /* background: linear-gradient(to right, #ff416c, #ff4b2b); */
+  background: linear-gradient(to right, #7141ff, #8a2bff);
   margin-top: 30px;
   text-decoration: none;
-  padding: 10px 5px;
+  padding: 6px 4px;
 }
 
 .card:hover {

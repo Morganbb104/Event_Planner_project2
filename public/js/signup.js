@@ -25,6 +25,11 @@ const sendSignup = async (e) => {
 
     const response = await fetchSignup.json().then((data) => {
         window.alert(data.message);
+
+        if(data.code === 201) {
+            window.location.pathname = '/login'
+        }
+
         emailSU.value = "";
         passwordSU.value = "";
         userName.value = "";
