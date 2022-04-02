@@ -4,10 +4,11 @@
         <span>E</span>vent Planner</a>
 
     <nav class="navbar">
-        <a href="/home">event</a>
-        <a href="/logIn">log in</a>
-        <a href="/signUp">sign up</a>
-        <a href="/userPersonalPage">your profile</a>
+        {{!-- <a href="/home">event</a> --}}
+        <a class="hide" id="profile" href="/userPersonalPage">your profile</a>
+        <a id="login" href="/logIn">log in</a>
+        <a id="sign-up" href="/signUp">sign up</a>
+        <a class="hide" id="log-out">Log out</a>
         {{!-- <a href="/contact">contact</a> --}}
     </nav>
 
@@ -143,7 +144,7 @@
                         </div>  -->
 
     <div class="swiper-container home-slider" id="home-slider">
-        <div class="swiper-wrapper" id="swiper-wrapper">
+        <div class="swiper-wrapper review-slider" id="swiper-wrapper">
             {{!-- <div class="swiper-slide">
                 <div class="card-header">
                     <h1>Beach BBQ</h1>
