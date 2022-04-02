@@ -7,7 +7,20 @@ const eventStartDate = document.querySelector('#start-date');
 const eventEndDate = document.querySelector('#end-date');
 const eventStartTime = document.querySelector('#start-time');
 const eventEndTime = document.querySelector('#end-time');
-const submitButton = document.querySelector('#create-submit')
+const createEventButton = document.querySelector('#create-submit')
+
+const logOutButton = document.querySelector('#log-out');
+
+
+const user = JSON.parse(localStorage.getItem('user'))
+
+// Get user's item from localstorage
+if(!user) {
+    alert('please login')
+// if user not logged in, redierect then to the logIn page
+    window.location.pathname = '/login'
+}
+
 
 //function for submission 
 const createEvent = async (event) =>{
@@ -15,6 +28,7 @@ const createEvent = async (event) =>{
 
     
     const eventBody = {
+        hostId: user.id,
         location: eventLocation.value.trim(),
         state: eventState.value,
         category: eventCategory.value,
@@ -22,10 +36,12 @@ const createEvent = async (event) =>{
         endDate: eventEndDate.value,
         startTime: eventStartTime.value,
         endTime: eventEndTime.value,
-        eventDescription: eventDescription.value,
+        description: eventDescription.value,
     };
 
-    //sending event details to the server using POST request
+    console.log(eventBody)
+
+    // sending event details to the server using POST request
     const fetchNewEvent = await fetch('/api/events', {
         method: 'POST',
         headers:{
@@ -45,4 +61,4 @@ const createEvent = async (event) =>{
 }
 
 //on submit button being clicked then add the details.
-submitButton.addEventListener('submit', createEvent);
+createEventButton.addEventListener('click', createEvent);
