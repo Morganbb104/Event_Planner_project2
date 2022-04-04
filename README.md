@@ -26,7 +26,7 @@ https://obscure-chamber-98928.herokuapp.com/
 2. 
 3. 
 
-## Team members: (alphabetically)
+## Team members: 
 1. Stone Comstock https://github.com/stone-com (Backend Functionality)
 2. Namees Albayati https://github.com/namees-github (Backend Functionality)
 3. Mike Sanders https://github.com/Mike-C-Sanders (Frontend Functionality)
