@@ -59,7 +59,7 @@ window.onclick = function (event) {
 // eventlistener for submist btn, put information on, and take
 
 const swiperWrapper = document.querySelector("#swiper-wrapper");
-const bottomCard = document.querySelector('#bottom-card');
+// const bottomCard = document.querySelector('#bottom-card');
 
 // get the event data to card
 const getAllEvents = async () => {
@@ -120,7 +120,7 @@ const getAllEvents = async () => {
       `;
 
       swiperSlide.innerHTML += cardBody;
-      bottomCard.appendChild(swiperSlide);
+      // bottomCard.appendChild(swiperSlide);
   })
 
 };
@@ -145,7 +145,7 @@ const submitFunction = async (e) => {
     e.preventDefault();
     // console.log(e)
     swiperWrapper.innerHTML = ''
-    bottomCard.innerHTML = ''
+    // bottomCard.innerHTML = ''
 
     const filterData = {
         state: states.value.trim(),
@@ -189,7 +189,7 @@ const submitFunction = async (e) => {
 
 
     for(let i = 0; i < data.length; i++) {
-      if(data[i] && i < 6) {
+      if(data[i] && i < 20) {
         const event = data[i]
   
         const swiperSlide = document.createElement("div");
@@ -240,7 +240,7 @@ const submitFunction = async (e) => {
           `;
     
           swiperSlide.innerHTML += cardBody;
-          bottomCard.appendChild(swiperSlide);
+          // bottomCard.appendChild(swiperSlide);
     })
 } 
 
@@ -253,7 +253,7 @@ const logOut = (e) => {
 
   alert('Log out')
 
-  window.location.pathname = '/home'
+  window.location.pathname = '/'
 
 }
 
