@@ -13,13 +13,13 @@ https://obscure-chamber-98928.herokuapp.com/
 
 
 ## Techniques
-1.Swiper 
-2.Express
-3.BCrypt
-4.Sequelize
-5.MySQL2
-6.Connect Session
-7.HandleBars
+1. Swiper 
+2. Express
+3. BCrypt
+4. Sequelize
+5. MySQL2
+6. Connect Session
+7. HandleBars
 
 ## APIs we used
 1. 
