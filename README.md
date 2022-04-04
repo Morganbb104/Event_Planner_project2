@@ -1,5 +1,5 @@
 # Project-2
-group project-2
+### group project-2 for University of Washington Coding bootcamp
 
 ## Live link
 https://obscure-chamber-98928.herokuapp.com/
