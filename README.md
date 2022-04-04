@@ -21,7 +21,7 @@ https://obscure-chamber-98928.herokuapp.com/
 
 
 ## Operation Manual 
-While users entry the event planner, they can do the following functions below
+While users entry the event planner app, then they can do the following functions below
 
 1. Go to the homePage, User can see the sign up/ log in buttons in Nav bar
 2. User can sign up,log in and update their info from the log in page. They're required to provide username,email,password.
@@ -50,6 +50,7 @@ While users entry the event planner, they can do the following functions below
 9. connect-session-sequelize
 10. express-session
 11. ApI’s with multiple https routes
+12. JawsDB
 
 ## APIs we used
 1. 
