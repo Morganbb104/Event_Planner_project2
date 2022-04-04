@@ -63,7 +63,7 @@ While users entry the event planner app, then they can do the following function
 3. Mike Sanders https://github.com/Mike-C-Sanders (Frontend Functionality)
 4. Chengchien Huang https://github.com/Morganbb104 (Frontend Functionality)
 
-Expectation in the future:
+## Expectation in the future:
 1. Add in a google maps integration - where’s the party at!
 2. Live chat functionality for when the event is taking place! 
 3. Rate the event and rate the host
