@@ -21,13 +21,6 @@ https://obscure-chamber-98928.herokuapp.com/
 6.Connect Session
 7.HandleBars
 
-
-## APIs we used
-1. 
-2.
-3. 
-
-
 ## APIs we used
 1. 
 2. 
