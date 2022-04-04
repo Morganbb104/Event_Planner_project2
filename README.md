@@ -27,18 +27,12 @@ https://obscure-chamber-98928.herokuapp.com/
 3. 
 
 ## Team members: (alphabetically)
-1. Stone Comstock https://github.com/stone-com
-2. Namees Albayati https://github.com/namees-github
-3. Mike Sanders https://github.com/Mike-C-Sanders
-4. Chengchien Huang https://github.com/Morganbb104
-
-work portions
-Stone : Backend Functionality
-Namees : Backend Functionality 
-Mike : Frontend Functionality
-Cheng : Frontend Functionality
+1. Stone Comstock https://github.com/stone-com (Backend Functionality)
+2. Namees Albayati https://github.com/namees-github (Backend Functionality)
+3. Mike Sanders https://github.com/Mike-C-Sanders (Frontend Functionality)
+4. Chengchien Huang https://github.com/Morganbb104 (Frontend Functionality)
 
 Expectation in the future:
-1.Add in a google maps integration - where’s the party at!
-2.Live chat functionality for when the event is taking place! 
-3.Rate the event and rate the host
+1. Add in a google maps integration - where’s the party at!
+2. Live chat functionality for when the event is taking place! 
+3. Rate the event and rate the host
