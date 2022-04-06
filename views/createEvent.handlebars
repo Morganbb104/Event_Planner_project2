@@ -1,6 +1,6 @@
 <header class="header">
 
-    <a href="#" class="logo">
+    <a href="/" class="logo">
         <span>E</span>vent Planner</a>
 
     <nav class="navbar">
@@ -22,8 +22,8 @@
                 Event!
             </span>
         </h3>
-        <a href="#" class="btn">Your attended event</a>
-        <a href="#" class="btn">Your created event</a>
+        {{!-- <a href="#" class="btn">Your attended event</a> --}}
+        <a href="/userPersonalPage" class="btn">Your created event</a>
     </div>
 
 
@@ -43,106 +43,7 @@
 
     </div>
     <section>
-<<<<<<< HEAD
-      <form class="form create-event">
-        <!-- event description -->
-        <div class="form-group">
-            <label for="event-description">Event Description:</label>
-            <input class="form-input" type="text" id="event-description" />
-        </div>
-        <!-- Location -->
-        <div class="form-group">
-            <label for="event-location">Location:</label>
-            <input class="form-input" type="text" id="event-location" />
-        </div>
-        <!-- State Select -->
-        <div class="form-group">
-            <label for="event-state">State:</label>
-            <select class="form-input" type="text" id="event-state" >
-                <option value="none" selected disabled hidden>Select an Option</option>
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AR">AR</option>	
-                <option value="AZ">AZ</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DC">DC</option>
-                <option value="DE">DE</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="IA">IA</option>	
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="MA">MA</option>
-                <option value="MD">MD</option>
-                <option value="ME">ME</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MO">MO</option>	
-                <option value="MS">MS</option>
-                <option value="MT">MT</option>
-                <option value="NC">NC</option>	
-                <option value="NE">NE</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>		
-                <option value="NV">NV</option>
-                <option value="NY">NY</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WI">WI</option>	
-                <option value="WV">WV</option>
-                <option value="WY">WY</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="event-category">Select a Category:</label>
-            <select class="form-input" id="event-category">
-                <option value="none" selected disabled hidden>Select an Option</option>
-                <option value="concert">Concert</option>
-                <option value="theatre">Theatre</option>
-                <option value="party">Party</option>
-                <option value="foodanddrink">Food & Drink</option>
-                <option value="career">Career & Development</option>
-                <option value="other">Something else? Other Awesome Events</option>
-            </select>
-        </div>
-        <div class="form-group">
-          <label for="start-time">What date is your event?</label>
-          <input
-                        type="date" name="date" value="2022-01-01" min="2022-01-01" max="2022-01-01">
-      </div>
-        <div class="form-group">
-            <label for="start-time">What time does your event start?</label>
-            <input class="form-input" type="time" id="start-time" />
-        </div>
-        <div class="form-group">
-            <label for="end-time">What time does your event end?</label>
-            <input class="form-input" type="time" id="end-time" />
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Submit">
-        </div>
-=======
->>>>>>> d264669d97ad4b69283b99614e4e9b064a4b05d2
+
 
         <form class="form create-event">
             <!-- event description -->
@@ -230,7 +131,7 @@
                 <input type="date" name="date" min="2022-01-01" id="start-date" required>
             </div>
             <div class="form-group">
-                <label for="end-date">What day does your event start?</label>
+                <label for="end-date">What day does your event end?</label>
                 <input type="date" name="date" min="2022-01-01" id="end-date" requried>
             </div>
             <div class="form-group">

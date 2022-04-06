@@ -1,5 +1,5 @@
 const cardContainer = document.querySelector('#card-container')
-const attendedBtn = document.querySelector('#attended-event')
+// const attendedBtn = document.querySelector('#attended-event')
 const createdBtn = document.querySelector('#created-event')
 const logOutButton = document.querySelector('#log-out');
 const createEventBtn = document.querySelector('#create-event') 
@@ -39,37 +39,39 @@ const getYourEvent = async () => {
     //get the user.id and save it into rsvp
     const rsvp = data.filter(e => e.userId === user.id)
 
-    // console.log(rsvp)
+    console.log(rsvp)
 
     // clear all element in container before append new child element
     cardContainer.innerHTML = '';
 
     //select the card and post info on the card
     rsvp.forEach(event => {
-        const card = document.createElement('div')
-        card.className += 'card'
+        // const card = document.createElement('div')
+        // card.className += 'card'
 
         //from controller/api/events/event.js
         fetch(`/api/events/${event.eventId}`)
             .then(response => response.json())
             .then(data => {
+
+                console.log(data)
                 
-                const localDate = new Date(data.startDate);
-                // change background color without covering other cards 
-                const cardBody = `
-                <div class="card-header">
-                    <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
-                </div>
-                <div class="card-body card-body-bg"> 
-                    <p>
-                        ${data.description}
-                    </p>
-                    <a href="#" class="btn">Read more</a>
-                </div>
-                `
-                // put seeded data on the card
-                card.innerHTML+= cardBody; // put the info on the cardBody
-                cardContainer.appendChild(card);
+                // const localDate = new Date(data.startDate);
+                // // change background color without covering other cards 
+                // const cardBody = `
+                // <div class="card-header">
+                //     <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
+                // </div>
+                // <div class="card-body card-body-bg"> 
+                //     <p>
+                //         ${data.description}
+                //     </p>
+                //     <a href="#" class="btn">Read more</a>
+                // </div>
+                // `
+                // // put seeded data on the card
+                // card.innerHTML+= cardBody; // put the info on the cardBody
+                // cardContainer.appendChild(card);
             })
     })
 }
@@ -91,7 +93,7 @@ const getCreatedEvent = async () => {
 
     const events = data.filter(event => event.hostId === user.id)
 
-    console.log(events)
+    // console.log(events)
 
     // clear all element in container before append new child element
     cardContainer.innerHTML = '';
@@ -107,7 +109,7 @@ const getCreatedEvent = async () => {
             <h1>${localDate.toLocaleString('en-US', {timeZone: 'PST'})}</h1>
         </div>
         <div class="card-body card-body-bg">
-            <p>
+            <p class = "created_event_content">
                 ${event.description}
             </p>
             <a href="#" class="btn">Read more</a>
@@ -125,10 +127,12 @@ const getCreatedEvent = async () => {
 
 
 
-getYourEvent()
+// getYourEvent()
+
+getCreatedEvent() //user come back to PersonalPage to see their created events
 
 logOutButton.addEventListener('click', logOut)
-attendedBtn.addEventListener('click', getYourEvent)
+// attendedBtn.addEventListener('click', getYourEvent)
 createdBtn.addEventListener('click', getCreatedEvent)
 createEventBtn.addEventListener('click', (e) => {
     e.preventDefault()
