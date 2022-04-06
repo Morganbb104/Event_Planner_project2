@@ -15,6 +15,6 @@ const submitComment = async (event) =>{
 
     //if the submission was a success, refresh event page!
     if(fetchComment.ok){
-        document.location('/')
+        document.location('')
     }
 }
