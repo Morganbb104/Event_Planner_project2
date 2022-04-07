@@ -638,7 +638,9 @@ body {
   background-color: #eee;
 }
 
-
+.created_event_content{
+  color: #111;
+}
 
 .card-body .btn {
   display: block;
